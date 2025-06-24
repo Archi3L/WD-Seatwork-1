@@ -1,0 +1,94 @@
+# Blue Lock Characters Webpage
+
+## 📄 Project Overview
+
+This project is a simple multi-section HTML website showcasing different characters from the anime *Blue Lock*. Each section represents a specific character, with a personalized header color, logo/image, and a navigation menu.
+
+---
+
+## 📁 File Structure
+
+📂 project-folder/
+├── index.html ← (Your provided HTML file)
+├── image/
+│ ├── EGO.png
+│ ├── Isagi.png
+│ ├── Kaiser.png
+│ ├── Sae.png
+│ └── Barou.png
+└── README.md ← (This file)
+
+
+> ✅ **Note:** Make sure your `image` folder contains the character images named exactly as in the `src` attributes.
+
+---
+
+## ✨ Features
+
+- **Character Headers:** Each section has a unique background color:
+  - EGO JINPACHI → Blue (#005bac)
+  - ISAGI YOICHI → Teal Green (rgb(107, 224, 185))
+  - MICHAEL KAISER → Pink (#d8236f)
+  - SAE ITOSHI → Purple (rgb(107, 47, 204))
+  - BAROU SHOHEI → Dark Red (#810000)
+
+- **Navigation Menu:** 
+  - Includes links like Home, About, Contact, and others.
+  - Hover effect with underline animation and color change.
+
+- **Responsive Grid Layout:** 
+  - Uses CSS Grid and Flexbox for alignment.
+  - Logo and navigation are neatly aligned.
+
+- **Footer:** 
+  - Displays the author's name and section info.
+
+---
+
+## 📌 How to Use
+
+1. **Download or clone this repository.**
+
+2. **Ensure your `image` folder contains the required images (`EGO.png`, `Isagi.png`, `Kaiser.png`, `Sae.png`, `Barou.png`).**
+
+3. **Open `index.html` in your web browser.**
+
+4. **Click the navigation links to explore different sections (make sure `Blue Lock Proj.html`, `ISAGI.html`, `KAISER.html`, `SAE.html`, and `BAROU.html` exist if you want the About pages to work).**
+
+---
+
+## 🎨 Customization
+
+- **Add or update character sections:**  
+  Duplicate a `<section>` block and adjust the class name, header color, and image.
+
+- **Modify styles:**  
+  Edit the `<style>` block in the `<head>` of the HTML.
+
+- **Add content:**  
+  You can add descriptions, backgrounds, or character stats within each section.
+
+---
+
+## 👨‍💻 Author
+
+- **Name:** Lantan, Archi Clemenz C.
+- **Course/Section:** TC05
+
+---
+
+## 📜 License
+
+This project is for educational purposes. Feel free to modify and reuse it.
+
+---
+
+## ✅ To Do
+
+- Add actual pages for *About*, *Contact*, *Sign Up*, and *Login*.
+- Make the site fully responsive for mobile screens.
+- Enhance styling with animations or additional images.
+
+---
+
+Enjoy exploring the Blue Lock characters! ⚽🔥
