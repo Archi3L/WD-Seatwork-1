@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TASK</title>
     <style>
+      
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,15 +36,34 @@
  
 }
 .Menu a {
+  position: relative;
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
+
+.Menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
 .Menu a:hover {
-  text-decoration: underline;
-  text-shadow: rgb(15, 13, 11) 1px 0 10px;
- 
+  color: #007bff; 
 }
+
+.Menu a:hover::after {
+  width: 90%;
+}
+  h2:hover {
+    transform: scale(1.1);
+  }
  
 .sonder{
     width: 150px;
@@ -59,39 +79,55 @@
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto; /* now allows 2 rows */
+  grid-template-rows: auto auto; 
   align-items: center;
-  padding: 10px;
-  background-color: rgb(0, 91, 175);
-  gap: 10px;
-  font-size: 22px;
+  padding: 5px;
+  background-color: #005bac;
+  gap: 6px;
+  font-size: 30px;
 }
- 
+
+
 footer {
-  background-color: rgb(107, 27, 27) white;
+  background-color:  rgb(42, 88, 148);
   text-align: center;
-  padding: 15px 0;
+  padding: 10px ;
   margin-top: 40px;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+}
+
+
+footer h3 {
+  transition: color 0.3s ease;
+}
+
+footer h3:hover {
+  color: #007bff;
 }
  
 body {
   background: linear-gradient(45 deg, #ff6b6b, #f7d794)
 }
- 
+  
+.ego-header { background-color: #005bac;}
+.isagi-header { background-color: rgb(107, 224, 185);}
+.kaiser-header { background-color: #d8236f;}
+.sae-header { background-color: rgb(107, 47, 204);}
+.barou-header { background-color: #810000;}
+
 </style>
  
 </head>
  
 <body>
- 
-<section>
-<header>
- 
- 
+
+
+
+ <section class ="EGO">
+<header class= "ego-header">
 <div class="logo">
-    <img src="EGO.webp" alt="jjk" class="sonder">
-    <h2>BLUE LOCK</h2>
+    <img src="EGO.webp" alt="Jinpachi" class="sonder">
+    <h2>EGO JINPACHI</h2>
     
 </div>
  
@@ -100,8 +136,8 @@ body {
   <a href="#"><h4>Home</h4></a>
   <a href="Blue Lock Proj.html"><h4>About</h4></a>
   <a href="#"><h4>Contact</h4></a>
-  <a href="#"><h4>Sign Up</h4></a>
-  <a href="#"><h4>Login</h4></a>
+  <a href="#"><h4>Background</h4></a>
+  <a href="#"><h4>Rivals</h4></a>
 </nav>
  
     <div class="right-side">
@@ -114,22 +150,22 @@ body {
 </footer>
 </section>
  
-<section>
-<header>
+ <section class ="Isagi">
+<header class= "isagi-header">
  
  
 <div class="logo">
-    <img src="Isagi.png" alt="" class="sonder">
+    <img src="Isagi.webp" alt="YOICHI" class="sonder">
     <h2>ISAGI YOICHI</h2>
 </div>
  
 <div class="right-group">
 <nav class="Menu">
   <a href="#"><h4>Home</h4></a>
-  <a href="#"><h4>About</h4></a>
+  <a href="ISAGI.html"><h4>About</h4></a>
   <a href="#"><h4>Contact</h4></a>
-  <a href="#"><h4>Sign Up</h4></a>
-  <a href="#"><h4>Login</h4></a>
+  <a href="#"><h4>Background</h4></a>
+  <a href="#"><h4>Rivals</h4></a>
 </nav>
  
     <div class="right-side">
@@ -142,19 +178,19 @@ body {
 </footer>
 </section>
  
-<section>
-<header>
+ <section class ="KAISER">
+<header class= "kaiser-header">
  
  
 <div class="logo">
-    <img src="sonder.jpg" alt="jjk" class="sonder">
+    <img src="Kaiser.webp" alt="KAISER" class="sonder">
     <h2>MICHAEL KAISER</h2>
 </div>
  
 <div class="right-group">
 <nav class="Menu">
   <a href="#"><h4>Home</h4></a>
-  <a href="#"><h4>About</h4></a>
+  <a href="KAISER.html"><h4>About</h4></a>
   <a href="#"><h4>Contact</h4></a>
   <a href="#"><h4>Sign Up</h4></a>
   <a href="#"><h4>Login</h4></a>
@@ -169,19 +205,19 @@ body {
   <h3> Lantan, Archi Clemenz C. | TC05 </h3>
 </footer>
 </section>
-<section>
-<header>
+ <section class ="SAE">
+<header class= "sae-header">
  
  
 <div class="logo">
-    <img src="sonder.jpg" alt="jjk" class="sonder">
+    <img src="Sae.webp" alt="S.ITOSHI" class="sonder">
     <h2>SAE ITOSHI</h2>
 </div>
  
 <div class="right-group">
 <nav class="Menu">
   <a href="#"><h4>Home</h4></a>
-  <a href="#"><h4>About</h4></a>
+  <a href="SAE.html"><h4>About</h4></a>
   <a href="#"><h4>Contact</h4></a>
   <a href="#"><h4>Sign Up</h4></a>
   <a href="#"><h4>Login</h4></a>
@@ -196,19 +232,21 @@ body {
   <h3> Lantan, Archi Clemenz C. | TC05 </h3>
 </footer>
 </section>
-<section>
-<header>
+
+
+ <section class ="BAROU">
+<header class= "barou-header">
  
  
 <div class="logo">
-    <img src="sonder.jpg" alt="jjk" class="sonder">
+    <img src="Barou.webp" alt="SHOUEI" class="sonder">
     <h2>BAROU SHOHEI</h2>
 </div>
  
 <div class="right-group">
 <nav class="Menu">
   <a href="#"><h4>Home</h4></a>
-  <a href="#"><h4>About</h4></a>
+  <a href="BAROU.html"><h4>About</h4></a>
   <a href="#"><h4>Contact</h4></a>
   <a href="#"><h4>Sign Up</h4></a>
   <a href="#"><h4>Login</h4></a>
