@@ -3,43 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blue Lock Characters</title>
-
+  <title>TASK</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(45deg, #ff6b6b, #f7d794);
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* HEADER GENERAL STYLE */
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(45deg, #ff6b6b, #f7d794);
+      color: #fff;
+    }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
+      padding: 20px 40px;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      color: white;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      background: linear-gradient(120deg, rgba(0,0,0,0.1), rgba(0,0,0,0)) no-repeat center;
+      backdrop-filter: blur(6px);
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
     }
 
-    .logo img {
-      width: 60px;
-      height: auto;
+    .sonder {
+      width: 100px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
-    .logo a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.5rem;
+    h2 {
+      font-size: 2rem;
       font-weight: bold;
+      color: white;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    h2:hover {
+      transform: scale(1.05);
     }
 
     .Menu {
@@ -48,94 +60,93 @@
     }
 
     .Menu a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
       position: relative;
-      transition: color 0.3s ease;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .Menu a::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 0%;
       height: 2px;
-      bottom: -5px;
       left: 0;
+      bottom: -5px;
       background-color: white;
       transition: width 0.3s ease;
     }
 
     .Menu a:hover {
-      color: #ffdf00;
+      background-color: rgba(255,255,255,0.15);
+      color: #ffd700;
     }
 
     .Menu a:hover::after {
       width: 100%;
     }
 
-    h2 {
-      margin: 10px 0;
-    }
-
-    h2:hover {
-      transform: scale(1.05);
-      transition: 0.3s;
-    }
-
-    .character-section {
-      padding: 40px 20px;
+    footer {
+      background-color: rgba(42, 88, 148, 0.95);
       text-align: center;
+      padding: 20px;
+      font-size: 1.3rem;
+      margin-top: 30px;
+      color: white;
+      border-top: 4px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
     }
 
-    .character-section img {
-      width: 150px;
-      height: 250px;
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0));
+      transform: skewX(-30deg);
+      animation: shimmer 4s infinite;
     }
 
-    /* SECTION BACKGROUND COLORS */
+    @keyframes shimmer {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+
+    footer h3 {
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    footer h3:hover {
+      color: #00ffff;
+      text-shadow: 0 0 12px #00ffff;
+    }
+
+    section {
+      padding: 40px 0;
+      border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+    }
+
     .ego-header { background-color: #005bac; }
     .isagi-header { background-color: #6fe2c0; }
     .kaiser-header { background-color: #d8236f; }
     .sae-header { background-color: #6b2fcc; }
     .barou-header { background-color: #810000; }
-
-    /* FOOTER */
-    footer {
-      background-color: #2a58b4;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 1rem;
-      margin-top: 40px;
-    }
-
-    .footer-links {
-      margin-bottom: 10px;
-    }
-
-    .footer-links a {
-      color: #ffffff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
-
 <body>
 
-<!-- CHARACTER SECTION TEMPLATE -->
-<section class="character-section">
+<!-- EGO -->
+<section class="EGO">
   <header class="ego-header">
     <div class="logo">
-      <img src="image/EGO.png" alt="EGO JINPACHI">
-      <a href="#">EGO JINPACHI</a>
+      <img src="assets/imgs/EGO.png" alt="Jinpachi" class="sonder">
+      <h2>EGO JINPACHI</h2>
     </div>
     <nav class="Menu">
       <a href="#">Home</a>
@@ -145,15 +156,17 @@
       <a href="#">Rivals</a>
     </nav>
   </header>
-  <img src="image/EGO.png" alt="EGO JINPACHI">
-  <h2>EGO JINPACHI</h2>
+  <footer>
+    <h3>Lantan, Archi Clemenz C. | TC05</h3>
+  </footer>
 </section>
 
-<section class="character-section">
+<!-- ISAGI -->
+<section class="Isagi">
   <header class="isagi-header">
     <div class="logo">
-      <img src="image/Isagi.png" alt="ISAGI YOICHI">
-      <a href="#">ISAGI YOICHI</a>
+      <img src="assets/imgs/Isagi.png" alt="YOICHI" class="sonder">
+      <h2>ISAGI YOICHI</h2>
     </div>
     <nav class="Menu">
       <a href="#">Home</a>
@@ -163,15 +176,17 @@
       <a href="#">Rivals</a>
     </nav>
   </header>
-  <img src="image/Isagi.png" alt="ISAGI YOICHI">
-  <h2>ISAGI YOICHI</h2>
+  <footer>
+    <h3>Lantan, Archi Clemenz C. | TC05</h3>
+  </footer>
 </section>
 
-<section class="character-section">
+<!-- KAISER -->
+<section class="KAISER">
   <header class="kaiser-header">
     <div class="logo">
-      <img src="image/Kaiser.png" alt="MICHAEL KAISER">
-      <a href="#">MICHAEL KAISER</a>
+      <img src="assets/imgs/Kaiser.png" alt="KAISER" class="sonder">
+      <h2>MICHAEL KAISER</h2>
     </div>
     <nav class="Menu">
       <a href="#">Home</a>
@@ -181,15 +196,17 @@
       <a href="#">Login</a>
     </nav>
   </header>
-  <img src="image/Kaiser.png" alt="MICHAEL KAISER">
-  <h2>MICHAEL KAISER</h2>
+  <footer>
+    <h3>Lantan, Archi Clemenz C. | TC05</h3>
+  </footer>
 </section>
 
-<section class="character-section">
+<!-- SAE -->
+<section class="SAE">
   <header class="sae-header">
     <div class="logo">
-      <img src="image/Sae.png" alt="SAE ITOSHI">
-      <a href="#">SAE ITOSHI</a>
+      <img src="assets/imgs/Sae.png" alt="S.ITOSHI" class="sonder">
+      <h2>SAE ITOSHI</h2>
     </div>
     <nav class="Menu">
       <a href="#">Home</a>
@@ -199,15 +216,17 @@
       <a href="#">Login</a>
     </nav>
   </header>
-  <img src="image/Sae.png" alt="SAE ITOSHI">
-  <h2>SAE ITOSHI</h2>
+  <footer>
+    <h3>Lantan, Archi Clemenz C. | TC05</h3>
+  </footer>
 </section>
 
-<section class="character-section">
+<!-- BAROU -->
+<section class="BAROU">
   <header class="barou-header">
     <div class="logo">
-      <img src="image/Barou.png" alt="BAROU SHOHEI">
-      <a href="#">BAROU SHOHEI</a>
+      <img src="assets/imgs/Barou.png" alt="SHOUEI" class="sonder">
+      <h2>BAROU SHOHEI</h2>
     </div>
     <nav class="Menu">
       <a href="#">Home</a>
@@ -217,19 +236,10 @@
       <a href="#">Login</a>
     </nav>
   </header>
-  <img src="image/Barou.png" alt="BAROU SHOHEI">
-  <h2>BAROU SHOHEI</h2>
+  <footer>
+    <h3>Lantan, Archi Clemenz C. | TC05</h3>
+  </footer>
 </section>
-
-<!-- GLOBAL FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="#">Terms</a>
-    <a href="#">Privacy</a>
-    <a href="#">Help</a>
-  </div>
-  <p>&copy; 2025 Lantan, Archi Clemenz C. | TC05</p>
-</footer>
 
 </body>
 </html>
