@@ -114,48 +114,88 @@
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
     }
 
-    footer {
-      padding: 15px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+    /* Unique Header Styles */
+    .ego header {
+      border-bottom: 2px dashed #ffd369;
+      text-align: center;
+      text-transform: uppercase;
     }
 
+    .isagi header {
+      background: rgba(0, 0, 0, 0.6);
+      border-left: 8px solid #ffd369;
+      padding-left: 40px;
+      font-style: italic;
+    }
+
+    .kaiser header {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      text-shadow: 1px 1px 2px #000;
+      background: #1a1a2e;
+    }
+
+    .sae header {
+      flex-direction: column;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.06);
+      padding-left: 30px;
+    }
+
+    .barou header {
+      justify-content: center;
+      gap: 40px;
+      border-top: 4px solid #fff;
+      background: radial-gradient(circle, rgba(0,0,0,0.6), rgba(68,68,68,0.3));
+    }
+
+    /* Unique Footer Styles */
     .footer1 {
-      text-align: center;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.2rem;
-      color: #ffd369;
+      font-size: 1.4rem;
+      background: #ffd369;
+      color: #000;
+      letter-spacing: 2px;
+      padding: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
     .footer2 {
-      text-align: right;
-      font-family: 'Playfair Display', serif;
+      border-top: 2px solid #ffd369;
       font-size: 1rem;
-      color: #aaa;
+      padding: 10px 20px;
+      text-align: left;
+      color: #ccc;
+      font-style: oblique;
     }
 
     .footer3 {
-      text-align: left;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #ffc107;
+      background-color: #222;
+      font-family: monospace;
+      color: #00ffcc;
+      text-align: center;
+      font-size: 1.2rem;
+      border-radius: 0 0 15px 15px;
+      padding: 12px;
     }
 
     .footer4 {
-      text-align: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem;
-      color: #eee;
-      background: #ffd369;
+      font-size: 1.1rem;
+      text-align: right;
+      background: linear-gradient(to right, #ffd369, #ffc107);
       color: #111;
+      font-weight: 700;
+      font-family: 'Orbitron', sans-serif;
+      padding: 10px 20px;
     }
 
     .footer5 {
-      text-align: center;
-      font-style: italic;
-      font-size: 1rem;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #000;
       color: #fff;
-      background-color: rgba(0,0,0,0.3);
+      text-align: center;
+      padding: 16px;
+      border-top: 3px double #ffd369;
     }
 
     .ego { background: linear-gradient(135deg, #003973, #E5E5BE); }
