@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TASK</title>
+  <title>Blue Lock Characters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Orbitron:wght@500&family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,233 +13,248 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: linear-gradient(45deg, #ff6b6b, #f7d794);
+      font-family: 'Space Grotesk', sans-serif;
+      background: #111;
       color: #fff;
     }
 
-    header {
+    section {
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      background: linear-gradient(120deg, rgba(0,0,0,0.1), rgba(0,0,0,0)) no-repeat center;
-      backdrop-filter: blur(6px);
+      border-bottom: 4px solid rgba(255, 255, 255, 0.08);
     }
 
-    .logo {
+    header {
+      padding: 20px;
       display: flex;
       align-items: center;
-      gap: 15px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
-    .sonder {
-      width: 100px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    .logo img {
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     h2 {
       font-size: 2rem;
-      font-weight: bold;
-      color: white;
-      text-shadow: 0 0 10px rgba(255,255,255,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    h2:hover {
-      transform: scale(1.05);
+      font-weight: 700;
+      color: #ffd369;
+      letter-spacing: 1px;
+      margin: 10px;
     }
 
     .Menu {
       display: flex;
-      gap: 30px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .Menu a {
-      position: relative;
       color: #fff;
+      font-size: 1rem;
       text-decoration: none;
-      font-weight: 600;
+      background-color: rgba(255,255,255,0.08);
       padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .Menu a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      left: 0;
-      bottom: -5px;
-      background-color: white;
-      transition: width 0.3s ease;
+      border-radius: 10px;
+      transition: 0.3s;
     }
 
     .Menu a:hover {
-      background-color: rgba(255,255,255,0.15);
-      color: #ffd700;
+      background-color: #ffd369;
+      color: #111;
     }
 
-    .Menu a:hover::after {
-      width: 100%;
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .content-box {
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .content-box h3 {
+      color: #ffd369;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .content-box p {
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .player-img img {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
     }
 
     footer {
-      background-color: rgba(42, 88, 148, 0.95);
+      padding: 15px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer1 {
       text-align: center;
-      padding: 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      color: #ffd369;
+    }
+
+    .footer2 {
+      text-align: right;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    .footer3 {
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffc107;
+    }
+
+    .footer4 {
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 1.3rem;
-      margin-top: 30px;
-      color: white;
-      border-top: 4px solid rgba(255, 255, 255, 0.2);
-      position: relative;
-      overflow: hidden;
+      color: #eee;
+      background: #ffd369;
+      color: #111;
     }
 
-    footer::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -75%;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0));
-      transform: skewX(-30deg);
-      animation: shimmer 4s infinite;
+    .footer5 {
+      text-align: center;
+      font-style: italic;
+      font-size: 1rem;
+      color: #fff;
+      background-color: rgba(0,0,0,0.3);
     }
 
-    @keyframes shimmer {
-      0% { left: -75%; }
-      100% { left: 125%; }
-    }
-
-    footer h3 {
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    footer h3:hover {
-      color: #00ffff;
-      text-shadow: 0 0 12px #00ffff;
-    }
-
-    section {
-      padding: 40px 0;
-      border-bottom: 4px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .ego-header { background-color: #005bac; }
-    .isagi-header { background-color: #6fe2c0; }
-    .kaiser-header { background-color: #d8236f; }
-    .sae-header { background-color: #6b2fcc; }
-    .barou-header { background-color: #810000; }
+    .ego { background: linear-gradient(135deg, #003973, #E5E5BE); }
+    .isagi { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); }
+    .kaiser { background: linear-gradient(135deg, #373B44, #4286f4); }
+    .sae { background: linear-gradient(135deg, #1e130c, #9a8478); }
+    .barou { background: linear-gradient(135deg, #000000, #434343); }
   </style>
 </head>
 <body>
 
 <!-- EGO -->
-<section class="EGO">
-  <header class="ego-header">
-    <div class="logo">
-      <img src="./image/EGO.png" alt="Jinpachi" class="sonder">
-      <h2>EGO JINPACHI</h2>
+<section class="ego">
+  <header>
+    <h2>EGO JINPACHI</h2>
+    <div class="Menu">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Rivals</a>
     </div>
-    <nav class="Menu">
-      <a href="#">Home</a>
-      <a href="Blue Lock Proj.html">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Background</a>
-      <a href="#">Rivals</a>
-    </nav>
+    <div class="logo"><img src="./image/EGO.png" alt="Ego Jinpachi"></div>
   </header>
-  <footer>
-    <h3>Lantan, Archi Clemenz C. | TC05</h3>
-  </footer>
+  <main>
+    <div class="content-box">
+      <h3>Blue Lock's Architect</h3>
+      <p>Jinpachi Ego is the mastermind behind the Blue Lock project. He believes in egoism as the only path to create the world’s greatest striker.</p>
+    </div>
+  </main>
+  <footer class="footer1">Archi Clemenz C. Lantan | TC05</footer>
 </section>
 
 <!-- ISAGI -->
-<section class="Isagi">
-  <header class="isagi-header">
-    <div class="logo">
-      <img src="./image/Isagi.png" alt="YOICHI" class="sonder">
-      <h2>ISAGI YOICHI</h2>
+<section class="isagi">
+  <header>
+    <div class="logo"><img src="./image/Isagi.png" alt="Isagi Yoichi"></div>
+    <h2>ISAGI YOICHI</h2>
+    <div class="Menu">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Rivals</a>
     </div>
-    <nav class="Menu">
-      <a href="#">Home</a>
-      <a href="ISAGI.html">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Background</a>
-      <a href="#">Rivals</a>
-    </nav>
   </header>
-  <footer>
-    <h3>Lantan, Archi Clemenz C. | TC05</h3>
-  </footer>
+  <main>
+    <div class="content-box">
+      <h3>The Visionary Striker</h3>
+      <p>Isagi uses spatial awareness to predict plays and make decisive moves. He is determined to become the egoist striker who leads Japan to glory.</p>
+    </div>
+  </main>
+  <footer class="footer2">Created by Archi Clemenz C. Lantan | TC05</footer>
 </section>
 
 <!-- KAISER -->
-<section class="KAISER">
-  <header class="kaiser-header">
-    <div class="logo">
-      <img src="./image/Kaiser.png" alt="KAISER" class="sonder">
-      <h2>MICHAEL KAISER</h2>
+<section class="kaiser">
+  <header>
+    <div class="Menu">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Login</a>
     </div>
-    <nav class="Menu">
-      <a href="#">Home</a>
-      <a href="KAISER.html">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Sign Up</a>
-      <a href="#">Login</a>
-    </nav>
+    <h2>MICHAEL KAISER</h2>
+    <div class="logo"><img src="./image/Kaiser.png" alt="Michael Kaiser"></div>
   </header>
-  <footer>
-    <h3>Lantan, Archi Clemenz C. | TC05</h3>
-  </footer>
+  <main>
+    <div class="content-box">
+      <h3>The German Emperor</h3>
+      <p>Kaiser is Isagi’s most powerful rival. A master tactician and lethal striker, his presence on the field demands attention and fear.</p>
+    </div>
+  </main>
+  <footer class="footer3">© Archi Clemenz C. Lantan | TC05</footer>
 </section>
 
 <!-- SAE -->
-<section class="SAE">
-  <header class="sae-header">
-    <div class="logo">
-      <img src="./image/Sae.png" alt="S.ITOSHI" class="sonder">
-      <h2>SAE ITOSHI</h2>
+<section class="sae">
+  <header>
+    <div class="logo"><img src="./image/Sae.png" alt="Sae Itoshi"></div>
+    <div class="Menu">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Login</a>
     </div>
-    <nav class="Menu">
-      <a href="#">Home</a>
-      <a href="SAE.html">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Sign Up</a>
-      <a href="#">Login</a>
-    </nav>
+    <h2>SAE ITOSHI</h2>
   </header>
-  <footer>
-    <h3>Lantan, Archi Clemenz C. | TC05</h3>
-  </footer>
+  <main>
+    <div class="content-box">
+      <h3>The Prodigal Genius</h3>
+      <p>Sae Itoshi, a young prodigy, once abandoned Japanese football to pursue greatness in Europe. Now, he's returned with a mission.</p>
+    </div>
+  </main>
+  <footer class="footer4">Made by Archi Clemenz C. Lantan | TC05</footer>
 </section>
 
 <!-- BAROU -->
-<section class="BAROU">
-  <header class="barou-header">
-    <div class="logo">
-      <img src="./image/Barou.png" alt="SHOUEI" class="sonder">
-      <h2>BAROU SHOHEI</h2>
+<section class="barou">
+  <header>
+    <div class="Menu">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Login</a>
     </div>
-    <nav class="Menu">
-      <a href="#">Home</a>
-      <a href="BAROU.html">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Sign Up</a>
-      <a href="#">Login</a>
-    </nav>
+    <div class="logo"><img src="./image/Barou.png" alt="Barou Shohei"></div>
+    <h2>BAROU SHOHEI</h2>
   </header>
-  <footer>
-    <h3>Lantan, Archi Clemenz C. | TC05</h3>
-  </footer>
+  <main>
+    <div class="content-box">
+      <h3>The Ruthless King</h3>
+      <p>Barou Shohei plays by his own rules. Ruthless, dominant, and driven by a kingly ego, he crushes anyone who stands in his way.</p>
+    </div>
+  </main>
+  <footer class="footer5">Archi Clemenz C. Lantan | TC05 - All Rights Reserved</footer>
 </section>
 
 </body>
