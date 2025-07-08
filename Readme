@@ -10,6 +10,8 @@ This project is a simple multi-section HTML website showcasing different charact
 
 📂 project-folder/
 ├── index.html ← (Your provided HTML file)
+├── css
+| ├── Style.css
 ├── image/
 │ ├── EGO.png
 │ ├── Isagi.png
